@@ -119,11 +119,11 @@ module.exports = {
                 handler: async (req, h) => {
 
                     anuncio = {
-                        usuario: req.credentials ,
-                        titulo: req.titulo,
-                        descripcion: req.descripcion,
-                        categoria: req.categoria,
-                        precio: Number.parseFloat(req.precio),
+                        usuario: req.payload.credentials ,
+                        titulo: req.payload.titulo,
+                        descripcion: req.payload.descripcion,
+                        categoria: req.payload.categoria,
+                        precio: Number.parseFloat(req.payload.precio),
 
                     }
 
